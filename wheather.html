@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Weather Station</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="wheather.css" />
+</head>
+<body>
+  <main class="sheet">
+    <span class="corner-bl"></span><span class="corner-br"></span>
+    <p class="eyebrow">Weather station</p>
+    <h1>Take today's reading</h1>
+
+    <div class="controls">
+      <select id="city-select" aria-label="Choose a city">
+        <option value="">Choose a city&hellip;</option>
+        <option value="new york">New York</option>
+        <option value="los angeles">Los Angeles</option>
+        <option value="chicago">Chicago</option>
+        <option value="paris">Paris</option>
+        <option value="tokyo">Tokyo</option>
+        <option value="london">London</option>
+      </select>
+      <button id="get-weather-btn" type="button">Get weather</button>
+    </div>
+    <p class="status" id="status" aria-live="polite"></p>
+
+    <section class="reading" id="reading" hidden>
+      <div class="hero">
+        <img id="weather-icon" alt="" />
+        <div>
+          <div class="hero-num"><span id="main-temperature"></span></div>
+          <div class="hero-sub">
+            <div id="weather-main"></div>
+            <div id="feels-like-line">Feels like <span id="feels-like"></span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="readout">
+        <div class="field">
+          <p class="label">Humidity</p>
+          <p class="value" id="humidity"></p>
+        </div>
+        <div class="field">
+          <p class="label">Location</p>
+          <p class="value" id="location"></p>
+        </div>
+        <div class="field">
+          <p class="label">Wind</p>
+          <p class="value" id="wind"></p>
+        </div>
+        <div class="field">
+          <p class="label">Gust</p>
+          <p class="value" id="wind-gust"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="wheather.js"></script>
+</body>
+</html>
